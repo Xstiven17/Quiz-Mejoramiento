@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('aula_codigo');
             $table->string('asignatura_codigo');
             $table->integer('hora');
-            $table->timestamps();
 
             $table->foreign('aula_codigo')->references('codigo')->on('aulas');
             $table->foreign('asignatura_codigo')->references('codigo')->on('asignaturas');

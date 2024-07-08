@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('asignatura_codigo');
             $table->integer('nota')->nullable();
             $table->text('incidencias')->nullable();
-            $table->timestamps();
 
             $table->foreign('alumno_dni')->references('dni')->on('alumnos');
             $table->foreign('asignatura_codigo')->references('codigo')->on('asignaturas');
+            $table->timestamps();
+
         });
     }
 

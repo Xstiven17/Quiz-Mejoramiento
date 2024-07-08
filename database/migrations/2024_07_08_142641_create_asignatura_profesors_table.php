@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('asignatura_codigo');
             $table->string('profesor_dni');
-            $table->timestamps();
 
             $table->foreign('asignatura_codigo')->references('codigo')->on('asignaturas');
             $table->foreign('profesor_dni')->references('dni')->on('profesores');

@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('aulas', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo')->primary();
+            $table->string('codigo')->unique();
             $table->string('piso');
             $table->string('pupitres');
-            $table->integer('pupitres');
             $table->string('dia');
             $table->string('mes');
             
